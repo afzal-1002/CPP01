@@ -6,7 +6,7 @@
 /*   By: mafzal < mafzal@student.42warsaw.pl>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/19 23:24:58 by mafzal            #+#    #+#             */
-/*   Updated: 2026/06/19 23:25:00 by mafzal           ###   ########.fr       */
+/*   Updated: 2026/06/20 00:50:17 by mafzal           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 int	main(int argc, char **argv)
 {
 	const char	*inputfile;
-	FileHandler	*filehandler;
+	FileHandler	filehandler;
 
 	if (argc != 4)
 	{
@@ -36,7 +36,8 @@ int	main(int argc, char **argv)
 		return (1);
 	}
 	inputfile = argv[1];
-	filehandler = new FileHandler;
-	filehandler->copyData(inputfile, str1, str2);
+	// filehandler = new FileHandler;
+	filehandler.copyData(inputfile, str1, str2);
+	// delete		filehandler;
 	return (0);
 }

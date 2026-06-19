@@ -1,4 +1,4 @@
-NAME = harl
+NAME = harlFilter
 
 CPP = c++
 
@@ -14,14 +14,14 @@ $(NAME):$(OBJ)
 	$(CPP) $(CPPFLAGS) $(OBJ) -o $(NAME)
 
 %.o:%.cpp
-	$(CPP) $(CPPFLAGS) -c $< -o $@
+	$(CPP) $(CFLAGS) -c $< -o $@
 
 clean:
 	rm -rf $(OBJ)
 
-fclean: clean 
+fclean:
 	rm -rf $(NAME)
 
 re: fclean all
 
-.PHONY: all clean fclean re
+.PHONY: all fclean clean re
